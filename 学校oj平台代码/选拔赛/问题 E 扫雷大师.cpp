@@ -1,0 +1,66 @@
+#include<stdio.h>
+int main()
+{
+	int n,m,i,j;
+	scanf("%d%d",&n,&m);
+	char a[n][m];
+	for(i=0;i<n;i++)
+	{
+		scanf("%s",&a[i]);
+	}
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<m;j++)
+		{
+			if('*'==a[i][j])
+			{
+				continue;
+			}
+			else
+			{
+				a[i][j]='0'; 
+				if('*'==a[i-1][j-1])
+				{
+					a[i][j]++; 
+				}
+				if('*'==a[i][j-1])
+				{
+					a[i][j]++; 
+				}
+				if('*'==a[i][j+1])
+				{
+					a[i][j]++; 
+				}
+				if('*'==a[i-1][j])
+				{
+					a[i][j]++; 
+				}
+				if('*'==a[i-1][j+1])
+				{
+					a[i][j]++; 
+				}
+				if('*'==a[i+1][j-1])
+				{
+					a[i][j]++; 
+				}
+				if('*'==a[i+1][j])
+				{
+					a[i][j]++; 
+				}
+				if('*'==a[i+1][j+1])
+				{
+					a[i][j]++; 
+				}
+			}
+		}
+	}
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<m;j++)
+		{
+			printf("%c",a[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}

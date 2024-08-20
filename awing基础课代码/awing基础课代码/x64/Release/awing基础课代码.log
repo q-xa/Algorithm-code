@@ -1,0 +1,5 @@
+﻿  790. 数的三次方根.cpp
+  795. 前缀和.cpp
+C:\c++daima\awing基础课代码\awing基础课代码\795. 前缀和.cpp(3,16): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+795. 前缀和.obj : error LNK2005: main 已经在 790. 数的三次方根.obj 中定义
+C:\c++daima\awing基础课代码\x64\Release\awing基础课代码.exe : fatal error LNK1169: 找到一个或多个多重定义的符号

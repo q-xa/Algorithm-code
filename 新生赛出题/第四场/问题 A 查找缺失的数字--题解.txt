@@ -1,0 +1,3 @@
+数字从1到N相加，然后减去输入的N-1个数字相加就可以求出少的那个数
+代码：
+https://www.luogu.com.cn/paste/wkm3k52w

@@ -1,0 +1,86 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int n,m,a,a1,b,b1,c,z,y,i;
+	scanf("%d%d",&n,&m);
+	for(i=0;i<n;i++)
+	{
+		scanf("%d%d",&a,&b);
+		if(a>b)
+		{
+			c=a;
+			a=b;
+			b=c;
+		}
+		if(i==0&&n==1)
+		{
+			a1=a;b1=b;
+			z=fabs(m-a1);
+			y=fabs(b1-m);
+			if(z>=y)
+			printf("%d\n",z);
+			else
+		   printf("%d\n",y);
+		}
+		else if(i==0)
+		{
+			a1=a;b1=b;
+			continue;
+		}
+		else if(i>0&&i<n-1)
+		{
+			if(a<=b1&&a1<=b)
+			{
+				if(a1<a)
+				{
+					c=a1;
+					a1=a;
+					a=c;
+				}
+				if(b<b1)
+				{
+					c=b1;
+					b1=b;
+					b=c;
+				}
+			}
+			else 
+			{
+				printf("-1\n");
+				break;
+			}
+		}
+		else if(i==n-1)
+		{
+			if(a<=b1&&a1<=b)
+			{
+				if(a1<a)
+				{
+					c=a1;
+					a1=a;
+					a=c;
+				}
+				if(b<b1)
+				{
+					c=b1;
+					b1=b;
+					b=c;
+				}
+				 z=fabs(m-a1);
+			y=fabs(b1-m);
+			if(z>=y)
+			printf("%d\n",z);
+			else
+		   printf("%d\n",y);
+			}
+			else 
+			{
+				printf("-1\n");
+				break;
+			}
+		}
+	}
+	       
+	return 0;
+}

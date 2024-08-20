@@ -1,0 +1,58 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	int n,w1=0,i,j,z1=0,w2,z2,f;
+	scanf("%d",&n);
+	char w[n+5],z[n+5];
+	scanf("%s",&w);
+	scanf("%s",&z);
+	for(i=0;i<strlen(w);i++)
+	{
+		for(j=i+1;j<strlen(w);j++)
+		{
+			if(w[i]==w[j])
+			{
+				for(f=i;f<strlen(w)-2;f++)
+				{
+					w[f]=w[f+2];
+				}
+				for(f=j;f<strlen(w)-2;f++)
+				{
+					w[f]=w[f+2];
+				}
+		        w1++;
+		        break;
+			}
+		}
+	}
+	for(i=0;i<strlen(z);i++)
+	{
+		for(j=i+1;j<strlen(z);j++)
+		{
+			if(z[i]==z[j])
+			{
+				for(f=i;f<strlen(z)-2;f++)
+				{
+					z[f]=z[f+2];
+				}
+				for(f=j;f<strlen(z)-2;f++)
+				{
+					z[f]=z[f+2];
+				}
+		        z1++;
+		        break;
+			}
+		}
+	}
+	w2=strlen(w)-(w1+1);
+	z2=strlen(z)-(z1+1);
+	printf("%d\n",w2);
+	if(w2<z2)
+	{
+		printf("YES\n");
+	}
+	else
+	printf("NO\n");
+	return 0;
+}

@@ -1,0 +1,90 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,a;
+    cin>>n;
+    while(n--)
+    {
+    	int a1=0,a2=0;
+    	string s;
+    	cin>>s;
+    	a1=a1+(s[0]-'0');
+		a2=a2+(s[1]-'0');
+		a1=a1+(s[2]-'0');
+		a2=a2+(s[3]-'0');
+		a1=a1+(s[4]-'0');
+		if(abs(a1-a2)==3)
+		{
+			cout<<"5"<<endl;
+			continue;
+		}
+		a2=a2+(s[5]-'0');
+		if(abs(a1-a2)<3)
+		{
+			a1=a1+(s[6]-'0');
+			if(abs(a1-a2)<3)
+			{
+			a2=a2+(s[7]-'0');
+			if(abs(a1-a2)<3)
+			{
+				if(a2==4&&a1==2)
+				{
+					cout<<"8"<<endl;
+					continue;
+				}
+				if(a2==3&&a1==1)
+				{
+					cout<<"8"<<endl;
+					continue;
+				}
+				a1=a1+(s[8]-'0');
+				if(abs(a1-a2)<3)
+				{
+					if(a1==5&&a2==3)
+					{
+						cout<<"9"<<endl;
+						continue;
+					}
+					if(a1==4&&a2==2)
+					{
+						cout<<"9"<<endl;
+						continue;
+					}
+					if(a1==3&&a2==1)
+					{
+						cout<<"9"<<endl;
+						continue;
+					}
+					a2=a2+(s[9]-'0');
+			    if(a1==a2)
+			    {
+			    	cout<<"-1"<<endl;
+				}
+				else
+				{
+					cout<<"10"<<endl;
+				}
+				}
+				else
+				{
+					cout<<"9"<<endl;
+				}    
+			}
+			else
+			{
+				cout<<"8"<<endl;
+			}
+			}
+			else
+			{
+				cout<<"7"<<endl;
+			}	
+		}
+		else
+		{
+			cout<<"6"<<endl;
+	    }
+	}
+	return 0;
+}
